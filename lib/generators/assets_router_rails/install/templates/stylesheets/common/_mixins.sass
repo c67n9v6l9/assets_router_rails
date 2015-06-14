@@ -1,0 +1,80 @@
+// mixinはchaincase
+=replace-image-options
+  text-indent: -9999px
+  color: transparent
+
+  a
+    width: 100%
+    height: 100%
+    display: block
+
+=image-size($path)
+  width: image-width($path)
+  height: image-height($path)
+
+=replace-bg($path)
+  +image-size($path)
+  background: image-url($path) no-repeat center
+  +background-size(cover)
+
+=replace-sprite($sprite, $name)
+  $position: sprite-position(nth($sprite, 1), $name)
+  $x: nth($position, 1)
+  $y: nth($position, 2)
+
+  +replace-image-options
+  background-image: nth($sprite, 2)
+  background-position: $x $y
+  background-repeat: no-repeat
+  height: image-height(sprite-file(nth($sprite, 1), $name))
+  width: image-width(sprite-file(nth($sprite, 1), $name))
+
+=replace-image($path)
+  +replace-image-options
+  +replace-bg($path)
+
+=pos($t: '', $r: '', $b: '', $l: '', $position: absolute)
+  position: $position
+  @if $t != ''
+    top: $t
+  @if $r != ''
+    right: $r
+  @if $b != ''
+    bottom: $b
+  @if $l != ''
+    left: $l
+
+=layer($index)
+  z-index: nth($zIndexArray, $index)
+
+=keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+  @-moz-keyframes #{$animation-name}
+    @content
+  @-ms-keyframes #{$animation-name}
+    @content
+  @keyframes #{$animation-name}
+    @content
+
+=animation($property)
+  -webkit-animation: $property
+  -moz-animation: $property
+  animation: $property
+
+=link-color($color: #fff)
+  a, a:link, a:visited, a:hover, a:active
+    color: $color
+
+=cntr-abs($width: 0, $height: 0, $position: absolute)
+  position: $position
+
+  @if $width != 0
+    left: 50%
+    margin-left: round($width / -2)
+    width: $width
+
+  @if $height != 0
+    height: $height
+    margin-top: round($height / -2)
+    top: 50%

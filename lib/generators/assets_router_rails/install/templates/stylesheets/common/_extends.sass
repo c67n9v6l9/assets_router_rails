@@ -1,0 +1,22 @@
+// extendはsnakecase
+%box_center
+  margin: 0 auto
+
+%text_center
+  text-align: center
+
+%text_bold
+  font-weight: bold
+
+%clearfix
+  &:after
+    content: ''
+    display: block
+    clear: both
+
+%reset_default_input
+  +appearance(none)
+  +border-radius(0)
+  background-color: transparent
+  border: none
+  padding: 0
