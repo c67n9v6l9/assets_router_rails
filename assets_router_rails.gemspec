@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'coffee-rails', '~> 4.1', '>= 4.1.0'
   spec.add_development_dependency 'compass-rails', '~> 2.0', '>= 2.0.4'
   spec.add_development_dependency 'underscore-rails', '~> 0'
+  spec.add_development_dependency 'rails_config', '~> 0'
 end

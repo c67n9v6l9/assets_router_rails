@@ -27,7 +27,11 @@ module AssetsRouterRails
         action_template += "  #{action_name}: ->\n\n"
       end
 
-      insert_into_file "app/assets/javascripts/controllers/#{@controller_name}_controller.coffee", action_template, :before => "@NS.Controller = @NS.Controller || {}\n"
+      case self.behavior
+      when :invoke
+        insert_into_file "app/assets/javascripts/controllers/#{@controller_name}_controller.coffee", action_template, :before => "@NS.Controller = @NS.Controller || {}\n"
+      when :revoke
+      end
     end
 
     def appent_router
