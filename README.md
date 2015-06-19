@@ -2,17 +2,17 @@
 
 RailsのAssetsPipelineにルーティング機能を追加したりRailsっぽいController、Actionをcoffeescriptで作成するGeneratorを提供します
 
-## 対象者
+## Target
 
 Railsを使う上でAssetsPipeline内のディレクトリ構成やルーティングをどうやるか決めかねている人
 
-## インストール
+## Install
 
 ```ruby
 gem 'assets_router_rails'
 ```
 
-## 機能
+## Functions
 
 * パスベースでのルーティング機能
 * coffeescriptでcontroller、action作成
@@ -21,7 +21,7 @@ gem 'assets_router_rails'
 * namespace管理
 * その他雑多なディレクトリ生成
 
-## 使い方
+## How to use
 
 ### install
 
@@ -86,8 +86,17 @@ rails d(estroy) assets_router_rails:controller user
       remove  app/assets/images/user
 ```
 
-## 課題
+## Problem
+
 * rails_config連携の有無の選択
 * http methodを区別したルーティング
 * stylesheetsの自動ルーティング
 * 言語の選択(javascript or coffeescript, sass or scss)
+
+## Author
+
+c67n9v6l9
+
+Email: c67n9v6l9@gmail.com
+
+Twitter: https://twitter.com/c67n9v6l9
