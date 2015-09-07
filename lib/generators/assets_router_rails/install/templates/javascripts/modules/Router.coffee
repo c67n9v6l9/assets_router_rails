@@ -3,7 +3,7 @@ class Router
   add: (path, controller_action) ->
     @list[path] = controller_action
   route: ->
-    Controller = @NS.Controller
+    Controller = window.NS.Controller
     request_path = location.pathname
 
     _.each @list, (controller_action, path) ->

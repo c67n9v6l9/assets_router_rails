@@ -18,12 +18,13 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.7"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency 'jquery-rails', '~> 0'
-  spec.add_development_dependency 'sass-rails', '~> 5.0'
-  spec.add_development_dependency 'coffee-rails', '~> 4.1', '>= 4.1.0'
-  spec.add_development_dependency 'compass-rails', '~> 2.0', '>= 2.0.4'
-  spec.add_development_dependency 'underscore-rails', '~> 0'
-  spec.add_development_dependency 'rails_config', '~> 0'
+  spec.add_dependency "bundler", "~> 1.7"
+  spec.add_dependency "rake", "~> 10.0"
+  spec.add_dependency 'jquery-rails', '~> 0'
+  spec.add_dependency 'sass-rails', '~> 5.0'
+  spec.add_dependency 'coffee-rails', '~> 4.1', '>= 4.1.0'
+  spec.add_dependency 'compass-rails', '~> 2.0', '>= 2.0.4'
+  spec.add_dependency 'underscore-rails', '~> 0'
+  spec.add_dependency 'rails_config', '~> 0'
+  spec.add_dependency 'jquery-easing-rails', '~> 0'
 end
