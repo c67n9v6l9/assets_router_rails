@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'sass-rails', '~> 5.0'
   spec.add_dependency 'coffee-rails', '~> 4.1', '>= 4.1.0'
   spec.add_dependency 'compass-rails', '~> 2.0', '>= 2.0.4'
-  spec.add_dependency 'underscore-rails', '~> 0'
+  spec.add_dependency 'underscore-rails'
   spec.add_dependency 'rails_config', '~> 0'
   spec.add_dependency 'jquery-easing-rails', '~> 0'
 end
