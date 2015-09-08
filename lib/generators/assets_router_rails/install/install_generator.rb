@@ -33,6 +33,7 @@ module AssetsRouterRails
     end
 
     def copy_stylesheets
+      remove_file 'app/assets/stylesheets/application.css'
       directory 'stylesheets', 'app/assets/stylesheets'
     end
   end
