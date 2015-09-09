@@ -34,7 +34,7 @@ module AssetsRouterRails
       end
     end
 
-    def appent_router
+    def append_router
       append_file 'app/assets/javascripts/config/routes.coffee' do
         template = ''
         @action_names.each do |action_name|
@@ -73,6 +73,7 @@ module AssetsRouterRails
     # image
     def create_image_directory
       empty_directory "app/assets/images/#{@controller_name}"
+      empty_directory "app/assets/images/#{@controller_name}/common"
       @action_names.each do |action_name|
         empty_directory "app/assets/images/#{@controller_name}/#{action_name}"
       end
