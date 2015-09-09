@@ -29,7 +29,7 @@ module AssetsRouterRails
     end
 
     def copy_views
-      copy_file 'views/layouts/application.html.slim', 'app/views/layouts/'
+      copy_file 'views/layouts/application.html.slim', 'app/views/layouts/application.html.slim'
     end
 
     def copy_javascripts
