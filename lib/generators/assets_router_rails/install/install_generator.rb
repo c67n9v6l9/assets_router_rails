@@ -28,7 +28,12 @@ module AssetsRouterRails
       end
     end
 
+    def copy_views
+      copy_file 'views/layouts/application.html.slim', 'app/views/layouts/'
+    end
+
     def copy_javascripts
+      remove_file 'app/assets/javascripts/application.js'
       directory 'javascripts', 'app/assets/javascripts'
     end
 

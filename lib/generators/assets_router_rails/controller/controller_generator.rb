@@ -54,7 +54,7 @@ module AssetsRouterRails
       empty_directory "app/assets/stylesheets/page/#{@controller_name}"
       @action_names.each do |action_name|
         create_file "app/assets/stylesheets/page/#{@controller_name}/_#{action_name}.sass" do
-          "// stylesheets file for #{@controller_name}##{action_name}"
+          "// stylesheets file for #{@controller_name}##{action_name}\n\n.#{@controller_name}_#{@action_name}"
         end
       end
     end
