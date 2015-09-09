@@ -29,6 +29,7 @@ module AssetsRouterRails
     end
 
     def copy_views
+      remove_file 'app/views/layouts/application.html.slim'
       copy_file 'views/layouts/application.html.slim', 'app/views/layouts/application.html.slim'
     end
 
